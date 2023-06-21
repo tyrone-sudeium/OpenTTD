@@ -41,11 +41,14 @@ jobs:
         echo "::group::Install system dependencies"
         # perl-IPC-Cmd, wget, and zip are needed to run vcpkg.
         # autoconf-archive is needed to build ICU.
+        # alsa-lib-devel and pulseaudio-libs-devel are needed for sound support in SDL.
         yum install -y \
           autoconf-archive \
           perl-IPC-Cmd \
           wget \
           zip \
+          alsa-lib-devel \
+          pulseaudio-libs-devel \
           # EOF
 
         # aclocal looks first in /usr/local/share/aclocal, and if that doesn't
